@@ -1,0 +1,142 @@
+:root{
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@media(max-width: 475px){
+    body{
+        margin: 2rem 0;
+    }
+    .card{
+        width: 90%;
+    }
+    .item{
+        padding: 0.5rem 0;
+    }
+    .price{
+        margin-right: 3rem;
+    }
+    
+}
+@media(min-width: 1000px){
+    body{
+        margin: 0;
+    }
+    .card{
+        width: 450px;
+    }
+    .item{
+        padding: 1.5rem;
+    }
+    .price{
+        margin-right: 6rem;
+    }
+}
+body{
+
+    min-height: 100vh;
+
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--PaleBlue);
+
+    display: grid;
+    place-items: center;
+
+}
+#icon{
+    border-radius: 50%;
+    background-color: var(--VeryPaleBlue);
+}
+.card{
+    background-color: white;
+    color: var(--DesaturatedBlue);
+
+    overflow: hidden;
+
+    border-radius: 1rem;
+    box-shadow: 0 20px 30px -8px rgb(167 168 207 / 43%);
+
+    text-align: center;
+}
+.card-body{
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 1.125rem;
+}
+.card-body > * {
+    margin: 12px 0;
+}
+.title{
+    font-size: 2rem;
+    font-weight: 900;
+    
+    color: var(--DarkBlue);
+}
+.text, .price{
+    
+    line-height: 1.5rem;
+}
+
+.item{
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+strong{
+    color: var(--DarkBlue);
+}
+.change{
+    color: var(--BrightBlue);
+    text-decoration: underline;
+
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.proceed{
+    padding: 1rem 0;
+    background-color: var(--BrightBlue);
+    box-shadow: 0 20px 30px -8px rgb(197 198 245);
+    color: white;
+}
+.cancel{
+    margin-top: 2rem;
+    background-color: white;
+    color: var(--DesaturatedBlue);
+}
+.btn{
+    width: 100%;
+
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+
+.change:hover, .proceed:hover{
+    opacity: 0.8;
+    text-decoration: none;
+}
+.cancel:hover{
+    color: var(--DarkBlue);
+}
